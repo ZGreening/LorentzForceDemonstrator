@@ -1,0 +1,28 @@
+
+
+syntax = "proto3";
+
+
+
+package grpcserver;
+
+// The message passing serialization service definition.
+service messagePassing {
+  // Sends a message containing variables in struct and returns bool of success
+  rpc sendVariables (setVariables) returns (variablesSet) {}
+
+}
+
+// The request message
+message setVariables {
+	int32 deflectingv = 1;
+	int32 accelv = 2;
+	int32 current = 3;
+	int32 magneticarc = 4;
+	int32 deflectingswitch = 5;
+}
+
+// The response message containing the response
+message variablesSet {
+  bool flag = 1;
+}

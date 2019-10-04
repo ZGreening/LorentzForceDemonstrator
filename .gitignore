@@ -1,0 +1,2 @@
+#ignore macos filesystem
+.DS_Store
