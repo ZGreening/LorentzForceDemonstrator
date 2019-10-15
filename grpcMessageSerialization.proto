@@ -1,8 +1,5 @@
 
-
 syntax = "proto3";
-
-
 
 package grpcserver;
 
