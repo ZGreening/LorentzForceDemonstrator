@@ -16,7 +16,7 @@ message setVariables {
 	int32 accelv = 2;
 	int32 current = 3;
 	int32 magneticarc = 4;
-	int32 deflectingswitch = 5;
+	int32 deflectingpolarity = 5;
 }
 
 // The response message containing the response

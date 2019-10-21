@@ -46,7 +46,7 @@ public:
         //  Variables in value[5] are in order:
         //      (names in the database)
         //      acceleratingVoltage;
-        //      deflectingSwitch;
+        //      deflectingPolarity;
         //      deflectingVoltage;
         //      magneticArc;
         //      magnetizingCurrent;
@@ -54,7 +54,7 @@ public:
         // Data we are sending to the server.
         setVariables request;
         request.set_accelv(value[0]);           //Range 0 to 250 volts
-        request.set_deflectingswitch(value[1]); // 0 = off; 1 = positive; 2 = negative
+        request.set_deflectingpolarity(value[1]); // 0 = off; 1 = positive; 2 = negative
         request.set_deflectingv(value[2]);      //Range 50 to 250 volts
         request.set_magneticarc(value[3]);      // 0 = off; 1 = clockwise; 2 = counterclockwise
         request.set_current(value[4]);          //Range 0.0 to 3.0 amps
@@ -128,7 +128,7 @@ int main(int argc, char **argv)
           "INSERT INTO DATA (Variables,Values_) "
           "VALUES ('magnetizingCurrent', 0); "
           "INSERT INTO DATA (Variables,Values_) "
-          "VALUES ('deflectingSwitch', 0); "
+          "VALUES ('deflectingPolarity', 0); "
           "INSERT INTO DATA (Variables,Values_) "
           "VALUES ('magneticArc', 0); ";
 

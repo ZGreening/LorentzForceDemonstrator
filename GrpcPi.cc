@@ -78,7 +78,7 @@ void assignValues(const setVariables &passed)
 	controller1.step(passed.accelv(), 1);
 	controller1.step(passed.current(), 3);
 	int magSwitch = passed.magneticarc();
-	int deflectSwitch = passed.deflectingswitch();
+	int deflectSwitch = passed.deflectingpolarity();
 
 	switch (magSwitch)
 	{
