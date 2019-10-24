@@ -58,6 +58,7 @@ public:
         request.set_deflectingv(value[2]);      //Range 50 to 250 volts
         request.set_magneticarc(value[3]);      // 0 = off; 1 = clockwise; 2 = counterclockwise
         request.set_current(value[4]);          //Range 0.0 to 3.0 amps
+                                                //Represented as an int as 0 to 300
 
         // Container for the data we expect from the server.
         variablesSet reply;
@@ -116,8 +117,8 @@ int main(int argc, char **argv)
                       "Values_	INT	NOT NULL);"
                       "DROP TABLE IF EXISTS QUEUE;"
                       "CREATE TABLE QUEUE("
-                      "ID 	INT	PRIMARY KEY	NOT NULL,"
-                      "QueuePosition	INT		NOT NULL);";
+                      "QueuePosition	INTEGER	PRIMARY KEY AUTOINCREMENT,"
+                      "IP 	CHAR(20)	UNIQUE	NOT NULL);";
 
     // Execute table creation
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
@@ -176,7 +177,7 @@ int main(int argc, char **argv)
         //std::cout<<values[1]<<std::endl;
 
         bool reply = messageSession.sendVariables(values);
-        std::cout << "Greeter received: " << reply << std::endl;
+        //std::cout << "Greeter received: " << reply << std::endl;
     }
 
     return 0;
