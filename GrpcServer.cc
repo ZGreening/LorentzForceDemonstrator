@@ -118,7 +118,7 @@ int main(int argc, char **argv)
                       "DROP TABLE IF EXISTS QUEUE;"
                       "CREATE TABLE QUEUE("
                       "QueuePosition	INTEGER	PRIMARY KEY AUTOINCREMENT,"
-                      "IP 	CHAR(20)	UNIQUE	NOT NULL);";
+                      "ID 	INT 	UNIQUE	NOT NULL);";
 
     // Execute table creation
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
