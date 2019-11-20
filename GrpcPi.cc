@@ -176,10 +176,6 @@ Microcontroller::Microcontroller(const unsigned int gearRatio, const unsigned in
 
 void Microcontroller::step(int voltage, int motor)
 {
-	//multiplies 3amps by 100 because we use hundredths place i.e. .01amp
-	//if(motor == mag)
-	//voltage=voltage*100;   //handle *100 on html side?
-
 	switch (motor)
 	{
 	case 1: //Accelerating Voltage motor
