@@ -80,12 +80,12 @@ void assignValues(const setVariables &passed)
 	int magSwitch = passed.magneticarc();
 	int deflectSwitch = passed.deflectingpolarity();
 
-	std::cout << "Deflecting Voltage = " << passed.deflectingv()
+	/*std::cout << "Deflecting Voltage = " << passed.deflectingv()
 		<< "\nAccelerating Voltage = " << passed.accelv()
 		<< "\nMagnetizing Current = " << passed.current()
 		<< "\nMagnetic Arc = " << passed.magneticArc()
 		<< "\nDeflecting Polarity = " << passed.deflectingpolarity()
-		<< std::endl << std::endl;
+		<< std::endl << std::endl;*/
 
 	switch (magSwitch)
 	{

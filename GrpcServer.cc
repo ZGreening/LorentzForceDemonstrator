@@ -214,11 +214,11 @@ int main(int argc, char **argv)
             //If the new values were received, update lastSentValues
             if (reply == GRPC_CALL_OK)
             {
-                std::cout << "Updating last sent values." << std::endl;
+                //std::cout << "Updating last sent values." << std::endl;
                 updateLastSentValues();
             }
         } else {
-            std::cout << "Values have not changed." << std::endl;
+            //std::cout << "Values have not changed." << std::endl;
         }
     }
 
