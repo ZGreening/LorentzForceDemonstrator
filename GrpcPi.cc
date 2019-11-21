@@ -98,8 +98,8 @@ void assignValues(const setVariables &passed)
 		relay[1] = 1;
 		break;
 	case 2: //counterclockwise
-		relay[1] = 0;
 		relay[0] = 1;
+		relay[1] = 0;
 		break;
 	}
 	switch (deflectSwitch)
@@ -268,10 +268,10 @@ void Microcontroller::writeSequence(const unsigned int sequenceNo, int motor)
 	{
 		switch (motor)
 		{
-		case 2:
+		case 1:
 			digitalWrite(inputPins[i], 0);
 			break;
-		case 1:
+		case 2:
 			digitalWrite(inputPins[i + 4], 0);
 			break;
 		case 3:
